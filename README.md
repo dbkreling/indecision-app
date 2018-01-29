@@ -33,3 +33,5 @@ The dependencies for this project (as of now) are
   ... to start serving up the public directory
 
    Do your changes in the src/app.js file from now on.
+
+7) Visual Studio extension: Babel ES6/ES7
