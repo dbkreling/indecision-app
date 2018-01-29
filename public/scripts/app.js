@@ -3,19 +3,22 @@
 // This file contains the script manually editable
 console.log('App.js is running');
 
-// JSX - JavaScript XML - extension
+var app = {
+  title: 'Indecision App',
+  subTitle: 'Put your life in the hands of a computer'
+};
 var template = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Indecision App'
+    app.title
   ),
   React.createElement(
     'p',
     null,
-    'This is JSX from src/app.js'
+    app.subTitle
   ),
   React.createElement(
     'ol',
@@ -33,26 +36,41 @@ var template = React.createElement(
   )
 );
 
+var user = {
+  name: 'Daniel',
+  occupation: 'Software Engineer',
+  age: 26,
+  location: 'Brazil'
+};
+
 var templateTwo = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Daniel Kreling'
+    user.name
   ),
   React.createElement(
     'p',
     null,
-    'Occupation: Software Engineer'
+    'Occupation: ',
+    user.occupation
   ),
   React.createElement(
     'p',
     null,
-    'Locatiion: Brazil'
+    'Location: ',
+    user.location
+  ),
+  React.createElement(
+    'p',
+    null,
+    'Age: ',
+    user.age
   )
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
