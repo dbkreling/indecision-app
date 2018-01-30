@@ -8,6 +8,7 @@ var app = {
   subTitle: 'Put your life in the hands of a computer',
   options: ['One', 'Two']
 };
+
 var template = React.createElement(
   'div',
   null,
@@ -47,6 +48,7 @@ var user = {
   age: 40,
   location: 'Brazil'
 };
+
 function getLocation(location) {
   if (location) {
     return React.createElement(
