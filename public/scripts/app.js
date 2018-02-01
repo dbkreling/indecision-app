@@ -1,63 +1,92 @@
 'use strict';
 
-// arguments is no longer bound with arrow functions
+// This file contains the script manually editable
+console.log('App.js is running');
 
-var add = function add(a, b) {
-  // console.log(arguments);
-  return a + b;
+var app = {
+  title: 'Indecision App',
+  subTitle: 'Put your life in the hands of a computer',
+  options: ['One', 'Two']
 };
 
-console.log(add(10, 1));
+var template = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    app.title
+  ),
+  app.subTitle && React.createElement(
+    'p',
+    null,
+    app.subTitle
+  ),
+  React.createElement(
+    'p',
+    null,
+    app.options.length > 0 ? 'Here are your options:' : 'No Options'
+  ),
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      'Item 1'
+    ),
+    React.createElement(
+      'li',
+      null,
+      'Item 2'
+    )
+  )
+);
 
-//this is no longer bound with objects
-
-var user = {
-  name: 'Daniel',
-  cities: ['Batavia', 'New York', 'Dublin'],
-  // printCitiesLived: function () {  // it works: ES5 syntax: this bound to user
-  printCitiesLived: function printCitiesLived() {
-    var _this = this;
-
-    // New ES6 syntax that works
-    // this.cities.forEach(function (city) {  --> fails: 'this' bound to the function scope
-    this.cities.forEach(function (city) {
-      console.log(_this.name + ' has lived in ' + city);
-    });
-  }
+var count = 0;
+var addOne = function addOne() {
+  count++;
+  renderToTheScreen();
+};
+var minusOne = function minusOne() {
+  count--;
+  renderToTheScreen();
+};
+var reset = function reset() {
+  count = 0;
+  renderToTheScreen();
 };
 
-user.printCitiesLived();
+var appRoot = document.getElementById('app');
 
-// The same block using the map() function
-var userTwo = {
-  name: 'Daniel',
-  cities: ['Ribeirao', 'Batavia', 'Floripa'],
-  printCitiesLived: function printCitiesLived() {
-    var _this2 = this;
+var renderToTheScreen = function renderToTheScreen() {
+  var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'h1',
+      null,
+      'Count: ',
+      count
+    ),
+    React.createElement(
+      'button',
+      { onClick: addOne },
+      '+1'
+    ),
+    React.createElement(
+      'button',
+      { onClick: minusOne },
+      '-1'
+    ),
+    React.createElement(
+      'button',
+      { onClick: reset },
+      'reset'
+    )
+  );
 
-    return this.cities.map(function (city) {
-      return _this2.name + ' has lived in ' + city;
-    });
-  }
+  ReactDOM.render(templateTwo, appRoot);
 };
 
-console.log(userTwo.printCitiesLived());
-
-// challenge:
-
-var multiplier = {
-  // numbers = array of numbers
-  // multiplyBy = single number
-  // multiply = returns an array where the numbers have been multiplied
-  numbers: [10, 20, 30],
-  multiplyBy: 10,
-  multiply: function multiply() {
-    var _this3 = this;
-
-    return this.numbers.map(function (num) {
-      return num * _this3.multiplyBy;
-    });
-  }
-};
-
-console.log(multiplier.multiply());
+renderToTheScreen();
