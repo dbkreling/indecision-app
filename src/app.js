@@ -9,9 +9,9 @@ console.log('App.js is running');
 
 const onFormSubmit = (e) => {
   e.preventDefault();
-
+  
   const option = e.target.elements.option.value;  // e.target is form, and access the value of the element named option
-
+  
   if (option) {
     app.options.push(option);
     e.target.elements.option.value = '';  // clear the option just added
@@ -35,8 +35,9 @@ let render = () => {
       <p>{app.options.length}</p>
       <button onClick={removeAll}>Remove all</button>
       <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
+        {
+          app.options.map((option) => <li key={option}>{option}</li>)
+        } 
       </ol>
       <form onSubmit={onFormSubmit}>
         <input type="text" name="option" />
