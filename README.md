@@ -35,3 +35,6 @@ The dependencies for this project (as of now) are
    Do your changes in the src/app.js file from now on.
 
 7) Visual Studio extension: Babel ES6/ES7
+
+8) Browser addOn / Plugin: 'React Developer Tools'
+    Installation directly via browser
