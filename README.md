@@ -38,3 +38,13 @@ The dependencies for this project (as of now) are
 
 8) Browser addOn / Plugin: 'React Developer Tools'
     Installation directly via browser
+
+9) On Lecture 49-Avoid Global Modules, we uninstall live-server and babel-cli[i] from the
+global modules and reinstall them as local dependencies. The sequence of commands, for the
+records, are:
+
+   $ yarn global uninstall live-server babel-cli
+
+   And then:
+
+   $ yarn add live-server babel-cli@6.24.1
