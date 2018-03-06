@@ -48,3 +48,8 @@ records, are:
    And then:
 
    $ yarn add live-server babel-cli@6.24.1
+
+10) From lecture 53 and 54, install validator, react, react-dom, babel-core and babel-loader.
+Babel-core and babel-loader are necessary in order to connect Babel with webpack.
+
+   $ yarn add validator@8.0.0 react@16.0.0 react-dom@16.0.0 babel-core@6.25.0 babel-loader@7.1.1
