@@ -53,3 +53,11 @@ records, are:
 Babel-core and babel-loader are necessary in order to connect Babel with webpack.
 
    $ yarn add validator@8.0.0 react@16.0.0 react-dom@16.0.0 babel-core@6.25.0 babel-loader@7.1.1
+
+11) From lecture 57, install webpack dev-server replacing live-server, because it comes with some optimizations to process and reder webpack code to the screen.
+
+    $ yarn add webpack-dev-server@2.5.1
+
+  And then configure it as contentBase in order to point the public folder to the server.
+
+    Documentation can be found at https://webpack.js.org/configuration/dev-server
