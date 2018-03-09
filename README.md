@@ -61,3 +61,9 @@ Babel-core and babel-loader are necessary in order to connect Babel with webpack
   And then configure it as contentBase in order to point the public folder to the server.
 
     Documentation can be found at https://webpack.js.org/configuration/dev-server
+
+12) Instal transform-class-properties plugin, found at http://babeljs.io/docs/plugins/transform-class-properties/, by issuing:
+
+    $ babel-plugin-transform-class-properties
+
+    ... and restart the dev-server
