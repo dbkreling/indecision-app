@@ -7,15 +7,20 @@ To install all the dependencies of this project, run:
 The dependencies for this project (as of now) are
 
 1) Nodejs (from the web)
+
 2) Yarn (installed via npm
+
 3) Preferably Visual Basic Studio (from the web)
+
 4) live-server (installed via yarn. Make sure to add ~/.yarn to the PATH)
+
 5) Babel - v.6.24.1 (via yarn global add babel-cli@6.24.1)
   5.0) yarn init
   5.1) locally install env preset via yarn
   5.2) locally install react preset via yarn
 
 	$ yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+
 
 6) Create a new src/app.js file with the contents of public/scripts/app.js.
    Now the scripts/app.js will not be touched anymore.
@@ -34,10 +39,13 @@ The dependencies for this project (as of now) are
 
    Do your changes in the src/app.js file from now on.
 
+
 7) Visual Studio extension: Babel ES6/ES7
+
 
 8) Browser addOn / Plugin: 'React Developer Tools'
     Installation directly via browser
+
 
 9) On Lecture 49-Avoid Global Modules, we uninstall live-server and babel-cli[i] from the
 global modules and reinstall them as local dependencies. The sequence of commands, for the
@@ -49,10 +57,12 @@ records, are:
 
    $ yarn add live-server babel-cli@6.24.1
 
+
 10) From lecture 53 and 54, install validator, react, react-dom, babel-core and babel-loader.
 Babel-core and babel-loader are necessary in order to connect Babel with webpack.
 
    $ yarn add validator@8.0.0 react@16.0.0 react-dom@16.0.0 babel-core@6.25.0 babel-loader@7.1.1
+
 
 11) From lecture 57, install webpack dev-server replacing live-server, because it comes with some optimizations to process and reder webpack code to the screen.
 
@@ -62,8 +72,18 @@ Babel-core and babel-loader are necessary in order to connect Babel with webpack
 
     Documentation can be found at https://webpack.js.org/configuration/dev-server
 
+
 12) Instal transform-class-properties plugin, found at http://babeljs.io/docs/plugins/transform-class-properties/, by issuing:
 
     $ babel-plugin-transform-class-properties
 
     ... and restart the dev-server
+
+
+13) Lecture 61 sets up React Modal, which is accomplished by issuing:
+
+    $ yarn add react-modal@2.2.2
+
+    .. and restart the dev-server.
+
+    Docs found at https://github.com/reactjs/react-modal
