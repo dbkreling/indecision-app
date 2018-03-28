@@ -116,3 +116,12 @@ To add 14 and 15, the steps are:
   Go ahead and configure scss now:
 
   https://sass-lang.com/guide
+
+
+16) Add two new loaders:
+
+  sass-loader: allows you to import sass files
+
+  node-sass: converts scss files into regular css files.
+
+  yarn add sass-loader@6.0.6 node-sass@4.5.3
