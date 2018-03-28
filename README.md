@@ -87,3 +87,41 @@ Babel-core and babel-loader are necessary in order to connect Babel with webpack
     .. and restart the dev-server.
 
     Docs found at https://github.com/reactjs/react-modal
+
+14) CSS-Loader
+
+  Documentation: npmjs.com/package/css-loader
+
+  Installation:
+
+    $ yarn add css-loader@0.28.4 style-loader@0.18.2
+
+15) Style-loader
+
+  Documentation: npmjs.com/package/style-loader
+
+  Installation:
+
+    $ yarn add style-loader@0.18.2
+
+To add 14 and 15, the steps are:
+
+  a. create a ./styles/styles.css at the root directory;
+  b. in webpack.config.js, add a new rule under 'module' (see lecture 64 for further instructions);
+  c. add steps 14 and 15
+  d. import './styles/style.css' into app.js
+
+  IMPORTANT: Restart your dev-server
+
+  Go ahead and configure scss now:
+
+  https://sass-lang.com/guide
+
+
+16) Add two new loaders:
+
+  sass-loader: allows you to import sass files
+
+  node-sass: converts scss files into regular css files.
+
+  yarn add sass-loader@6.0.6 node-sass@4.5.3
