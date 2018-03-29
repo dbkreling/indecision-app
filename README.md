@@ -125,3 +125,11 @@ To add 14 and 15, the steps are:
   node-sass: converts scss files into regular css files.
 
   yarn add sass-loader@6.0.6 node-sass@4.5.3
+
+17) Add normalize.css
+
+  yarn add normalize.css@7.0.0
+
+  Go to node_modules and verify its path: normalize.css/normalize.css and import it to app.js;
+
+  Addjust webpack to accept css as well.
