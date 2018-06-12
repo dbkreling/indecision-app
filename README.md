@@ -1,3 +1,23 @@
+Executive summary:
+
+  To run this project, navigate to the root of the project (indecision-app/) and from a terminal issue:
+
+    $ yarn run serve
+
+  and from another terminal window:
+
+    $ yarn run dev-server
+
+Needless to say that the dev-server output will show where the project is running at by showing a line like:
+
+    "Project is running at http://localhost:8081/"
+
+Your browser should resolve that with no issues.
+
+See below for further information about the project.
+
+Description:
+
 This is a project from The Complete React Web Developer Course (with Redux) course.
 
 To install all the dependencies of this project, run:
@@ -77,7 +97,11 @@ Babel-core and babel-loader are necessary in order to connect Babel with webpack
 
     $ babel-plugin-transform-class-properties
 
-    ... and restart the dev-server
+    ... and restart the dev-server.
+
+    To restar the dev-server, issue 
+      $ yarn run dev-server
+
 
 
 13) Lecture 61 sets up React Modal, which is accomplished by issuing:
